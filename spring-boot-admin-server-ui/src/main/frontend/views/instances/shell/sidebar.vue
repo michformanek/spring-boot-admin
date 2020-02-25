@@ -41,7 +41,7 @@
       >
         <router-link
           :to="{ name: group.views[0].name, params: { 'instanceId' : instance.id } }"
-          v-text="hasMultipleViews(group) ? $t('sidebar.' + group.id + '.title') : ($t(group.views[0].label))"
+          v-text="hasMultipleViews(group) && $te('sidebar.' + group.id + '.title') ? $t('sidebar.' + group.id + '.title') : ($t(group.views[0].label))"
           active-class=""
           exact-active-class=""
           :class="{'is-active' : isActiveGroup(group) }"
